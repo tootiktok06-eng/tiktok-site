@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TikTok OAuth Callback</title>
+</head>
+
+<body>
+
+<h2>TikTok Login Success</h2>
+
+<p id="result">Processing...</p>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+const code = params.get("code");
+const state = params.get("state");
+
+if(code){
+    document.getElementById("result").innerHTML =
+    "Authorization Code: " + code;
+}else{
+    document.getElementById("result").innerHTML =
+    "Login failed or cancelled.";
+}
+
+</script>
+
+</body>
+</html>
