@@ -1,38 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>TikTok OAuth Callback</title>
-<meta charset="utf-8">
+<title>TikTok Callback</title>
 </head>
-
 <body>
-
-<h2>TikTok Authorization</h2>
-
-<div id="status">Waiting for TikTok response...</div>
-
-<script>
-
-const params = new URLSearchParams(window.location.search);
-
-const code = params.get("code");
-const state = params.get("state");
-const error = params.get("error");
-
-if(code){
-    document.getElementById("status").innerHTML =
-    "Login success.<br><br>Authorization Code:<br>" + code;
-}
-else if(error){
-    document.getElementById("status").innerHTML =
-    "Login failed: " + error;
-}
-else{
-    document.getElementById("status").innerHTML =
-    "No response received.";
-}
-
-</script>
-
+<h1>Login Successful</h1>
+<p>You may close this window.</p>
 </body>
 </html>
